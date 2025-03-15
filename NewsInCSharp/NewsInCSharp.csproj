@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PublishAot>true</PublishAot>
+		<InvariantGlobalization>true</InvariantGlobalization>
+		<LangVersion>latest</LangVersion>
+		
+		<EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+		
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="HandleBars.Net" Version="2.1.6" />
+		<PackageReference Include="RandomDataGenerator.Net" Version="1.0.18" />
+		<PackageReference Include="Scriban" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NewsInDotnet.SourceGenerators\NewsInDotnet.SourceGenerators.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+	</ItemGroup>
+
+</Project>

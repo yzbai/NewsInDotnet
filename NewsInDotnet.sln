@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsInCSharp", "NewsInCSharp\NewsInCSharp.csproj", "{7BC68FC6-A67B-4CF6-A856-8CD4401CD3B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsInDotnet.SourceGenerators", "NewsInDotnet.SourceGenerators\NewsInDotnet.SourceGenerators.csproj", "{A101DF57-99FB-41C9-8EA8-E7C40350D207}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BC68FC6-A67B-4CF6-A856-8CD4401CD3B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BC68FC6-A67B-4CF6-A856-8CD4401CD3B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BC68FC6-A67B-4CF6-A856-8CD4401CD3B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BC68FC6-A67B-4CF6-A856-8CD4401CD3B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A101DF57-99FB-41C9-8EA8-E7C40350D207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A101DF57-99FB-41C9-8EA8-E7C40350D207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A101DF57-99FB-41C9-8EA8-E7C40350D207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A101DF57-99FB-41C9-8EA8-E7C40350D207}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10A8C59F-89E2-4177-827D-FF02CB61BB28}
+	EndGlobalSection
+EndGlobal
