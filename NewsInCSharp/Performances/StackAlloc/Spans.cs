@@ -10,7 +10,7 @@ namespace NewsInCSharp.Performances.StackAlloc
     /// 比如Task，StringBuilder，List
     /// 
     /// scoped 关键字配合 ref struct，防止这个引用存储到堆上。
-    /// ref struct的本质就是栈上的引用类型。
+    /// ref struct的本质就是栈上的引用类型。 
     /// </summary>
     public class Spans : IRunable
     {
