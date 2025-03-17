@@ -2,6 +2,7 @@
 using HandlebarsDotNet;
 
 using NewsInCSharp.Accessories;
+using NewsInCSharp.Performances.StackAlloc;
 
 using Scriban;
 
@@ -17,6 +18,20 @@ namespace NewsInCSharp
             LiteralStringStyle1();
             LiteralStringStyle2();
             VariousStringStyles();
+            TestValueStringBuilder();
+        }
+
+        /// <summary>
+        /// 和ValueTask一样，配合ref struct / span，实现在栈上操作字符串
+        /// </summary>
+        private void TestValueStringBuilder()
+        {
+            // 使用栈内存构建字符串
+            Span<char> buffer = stackalloc char[256];
+            var vsb = new ValueStringBuilder(buffer);
+            vsb.Append("Hello, ");
+            vsb.Append("World!");
+            string result = vsb.ToString(); // "Hello, World!"
         }
 
         public void VariousStringStyles()

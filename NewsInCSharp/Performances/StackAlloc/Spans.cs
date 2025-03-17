@@ -3,8 +3,15 @@ using System.Runtime.InteropServices;
 
 using NewsInCSharp.Accessories;
 
-namespace NewsInCSharp.Performances
+namespace NewsInCSharp.Performances.StackAlloc
 {
+    /// <summary>
+    /// Span配合 stackalloc 可以改造很多原始类，达到性能提升
+    /// 比如Task，StringBuilder，List
+    /// 
+    /// scoped 关键字配合 ref struct，防止这个引用存储到堆上。
+    /// ref struct的本质就是栈上的引用类型。
+    /// </summary>
     public class Spans : IRunable
     {
         public void Run()
@@ -12,6 +19,24 @@ namespace NewsInCSharp.Performances
             SpanIsRefStruct();
             ModifyStringWithoutReAlloc();
             JoinNumbers();
+        }
+
+        //this is a method that use span to speed up string modification
+        private void SpeedUpStringReplace()
+        {
+            string bigString = Utils.GetNaughtyString();
+            char[] buffer = bigString.ToCharArray();
+            Span<char> span = buffer.AsSpan();
+
+            for (int i = 0; i < span.Length; i++)
+            {
+                if (span[i] == 'a')
+                {
+                    span[i] = 'x';
+                }
+            }
+
+            Console.WriteLine(span.ToString());
         }
 
         private void ModifyStringWithoutReAlloc()

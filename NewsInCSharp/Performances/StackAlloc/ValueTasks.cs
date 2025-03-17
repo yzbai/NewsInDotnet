@@ -1,5 +1,4 @@
-﻿
-namespace NewsInCSharp.Performances
+﻿namespace NewsInCSharp.Performances.StackAlloc
 {
     /// <summary>
     /// 优先使用 Task：如果方法几乎总是异步完成，直接使用 Task 更简单、安全。
